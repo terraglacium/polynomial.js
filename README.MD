@@ -1,3 +1,3 @@
 ## polynomial.js
 
-a polynomial solver written in js
+A polynomial solver written in JavaScript

@@ -1,6 +1,10 @@
 "use strict";
 
-let userInput = prompt("Input a function", "1x^1+1");
+const printOut = require("./functions/printOut.js");
+//import { printOut } from './functions/printOut.js';
+
+//let userInput = prompt("Input a function", "1x^1+1");
+let userInput = "1x^1+1";
 let polynomialArray = [];
 
 function arrayGenerator(polynomial) {
@@ -17,6 +21,12 @@ function arrayGenerator(polynomial) {
 //pass in user input with a regex filter for [+/-][number]x^[number]
 arrayGenerator(userInput.match(/[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]/g));
 
+console.log(polynomialArray);
+
+printOut(userInput);
+
+//pass in user input with a regex filter for [+/-][number]x^[number]
+
 // proto regex /[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]|[+-]x\^\d|[+-]?x/g
 // orig regex /[+-]?\d+x\^\d+|[+-\s]\d[+-\s]/g
 
@@ -30,10 +40,14 @@ arrayGenerator(userInput.match(/[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]/g));
 
   /*
   * Functions to be written
+  * printOut
+  * degree
+  * factor
   * add
-  *
-  *
-  *
-  *
-  *
+  * subtract
+  * multiply
+  * division (synthetic)
+  * division (long division)
+  * derivative (to the first derivative)
+  * integral
   */
