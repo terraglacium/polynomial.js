@@ -2,6 +2,7 @@
  * @file main.js
  * @author Andy Ren (a.k.a @terraglacium)
  * @license apache
+ * @comment: use -4x^3+6x^2+2x^1+3x^7+8x^8-888 as test!
  */
 
 "use strict";
@@ -63,7 +64,7 @@ function insertMissing(polynomial) {
   let insertedPolyArray = [];
 
   polynomial.map((monomial) => {
-    if(monomial.power)
+    if(monomial.power){}
   });
   for(let i = 0; i < polynomial.length; ++i) {
     let diff = polynomial[i].power - polynomial[i+1].power == 1;
