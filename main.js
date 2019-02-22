@@ -30,22 +30,20 @@ let polynomialArray = [];
  * polynomialProps is an array with the monomial split
 */
 function arrayGenerator(polynomial) {
-    let localPolyArray = [];
-    polynomial.forEach((monomial) => {
-      let polynomialProps = monomial.split('^');
-      localPolyArray.push({
-          coefficient: parseFloat(polynomialProps[0]),
-          power: polynomialProps[1] != null ? parseInt(polynomialProps[1]) : 0
-      });
-
+  let localPolyArray = [];
+  polynomial.forEach((monomial) => {
+    let polynomialProps = monomial.split('^');
+    localPolyArray.push({
+      coefficient: parseFloat(polynomialProps[0]),
+      power: polynomialProps[1] != null ? parseInt(polynomialProps[1]) : 0
     });
-    //console.log(localPolyArray);
-    // Sort algorithm for an array in descending order
-    localPolyArray.sort((monomial1, monomial2) => {
-      return monomial2.power - monomial1.power
-    });
-    return localPolyArray;
-
+  });
+  //console.log(localPolyArray);
+  // Sort algorithm for an array in descending order
+  localPolyArray.sort((monomial1, monomial2) => {
+    return monomial2.power - monomial1.power
+  });
+  return localPolyArray;
 }
 
 console.log(userInput.match(regex))
@@ -60,43 +58,44 @@ console.log(polynomialArray);
 //console.log(arrayGenerator("2x^1+123".match(regex)));
 
 /* inserts missing entries for consistency
- * checks if power for each monomial object exist, 
+ * checks if power for each monomial object exist,
  * if so, then equal passed array element as element
  * of insertedPolyArray
  * if not, create a new object entry for insertedPolyArray
 */
-  function insertMissing(polynomial) {
+function insertMissing(polynomial) {
   let insertedPolyArray = [];
   let power = polynomial[0].power;
-  
-  for(let i = 0; i <= power; ++i) {
+
+  for (let i = 0; i <= power; ++i) {
     let powerExists = polynomial.find(function(monomial) {
       return monomial.power === power - i;
     });
-    if(powerExists) {
-      insertedPolyArray[i] = polynomial.shift(); 
+
+    if (powerExists) {
+      insertedPolyArray[i] = polynomial.shift();
     } else {
-      insertedPolyArray[i] = {coefficient: 0, power: power-i};
+      insertedPolyArray[i] = { coefficient: 0, power: power - i };
     }
   }
   return insertedPolyArray;
 }
 
 //insertMissing(polynomialArray);
-polynomialArray = insertMissing(polynomialArray); 
+polynomialArray = insertMissing(polynomialArray);
 console.log(polynomialArray);
 
 polynomialArray = addition(polynomialArray);
 console.log(polynomialArray);
 
-//fetches command from user 
-/*if (prompt) { 
-
-} else if() { 
+//fetches command from user
+/*if (prompt) {
 
 } else if() {
 
-} else if() { 
+} else if() {
+
+} else if() {
 
 }*/
 
@@ -117,12 +116,10 @@ console.log(polynomialArray);
   * degree
   * factor
   * add
-  * subtract
+  * subtract from orig poly
   * multiply
   * division (synthetic)
   * division (long division)
   * derivative (to the first derivative)
   * integral
   */
-
-
