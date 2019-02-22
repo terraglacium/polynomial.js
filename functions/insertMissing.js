@@ -1,5 +1,12 @@
 "use strict";
 
+/* inserts missing entries for consistency
+ * checks if power for each monomial object exist,
+ * if so, then equal passed array element as element
+ * of insertedPolyArray
+ * if not, create a new object entry for insertedPolyArray
+*/
+
 function insertMissing(polynomial) {
   let insertedPolyArray = [];
   let power = polynomial[0].power;

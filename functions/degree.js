@@ -5,8 +5,8 @@
 // browserify for node?
 /*export*/
 
-function degree(array) {
-    console.log(array);
+function degree(polyArray) {
+    console.log(polyArray);
     console.log(`The degree of this polynomial is ${array[0].power}`);
 }
 

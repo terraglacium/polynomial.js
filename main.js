@@ -9,7 +9,9 @@
 // const fs = require('fs');
 // ^ for readfilesync
 const printOut = require("./functions/printOut.js");
+const degree = require("./functions/degree.js");
 const addition = require("./functions/addition.js");
+const subtraction = require("./functions/subtraction.js");
 //import { printOut } from './functions/printOut.js';
 const regex = /[+-]?\d+x\^\d+|[+-\s]\d+/g;
 /* new regex /[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]|\d+/g
@@ -81,6 +83,11 @@ function insertMissing(polynomial) {
   return insertedPolyArray;
 }
 
+
+/*
+ * ---> run functions past this point
+ * this is because the functions are optimized to work with insertMissing
+ */
 //insertMissing(polynomialArray);
 polynomialArray = insertMissing(polynomialArray);
 console.log(polynomialArray);
@@ -112,11 +119,14 @@ console.log(polynomialArray);
 
   /*
   * Functions to be written
-  * printOut
-  * degree
+  * arrayGenerator - done
+  * insertMissing - done
+  * printOut - done
+  * degree - done
+  * arrayToString
   * factor
-  * add
-  * subtract from orig poly
+  * add - evaluate for empty {}
+  * subtract from orig poly - evaluate for empty {}
   * multiply
   * division (synthetic)
   * division (long division)

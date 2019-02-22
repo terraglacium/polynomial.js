@@ -1,5 +1,13 @@
 "use strict";
 
+/*
+ * Function arrayGenerator:
+ * Takes in an .match(regex) array
+ * forEach(monomial) breaks down each entry of the "polynomial" param
+ * array into an array of objects containing props "coefficient" and "power"
+ * polynomialProps is an array with the monomial split
+*/
+
 function arrayGenerator(polynomial) {
   let localPolyArray = [];
   polynomial.forEach((monomial) => {
