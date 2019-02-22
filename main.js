@@ -8,7 +8,8 @@
 "use strict";
 // const fs = require('fs');
 // ^ for readfilesync
-//const printOut = require("./functions/printOut.js");
+const printOut = require("./functions/printOut.js");
+const addition = require("./functions/addition.js");
 //import { printOut } from './functions/printOut.js';
 const regex = /[+-]?\d+x\^\d+|[+-\s]\d+/g;
 /* new regex /[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]|\d+/g
@@ -17,8 +18,8 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]\d+/g;
  * original regex /[+-]?\d+x\^\d+|[+-\s]\d[+-\s]/g
  */
 
-let userInput = prompt("Input a function", "1x^1+1");
-//let userInput = "1x^1+1";
+//let userInput = prompt("Input a function", "1x^1+1");
+let userInput = "1x^2+1";
 let polynomialArray = [];
 
 /*
@@ -46,10 +47,9 @@ function arrayGenerator(polynomial) {
     return localPolyArray;
 
 }
-// map() ^ ?
 
 console.log(userInput.match(regex))
-console.log(arrayGenerator(userInput.match(regex)));
+//console.log(arrayGenerator(userInput.match(regex)));
 
 /* polynomialArray is equal to the arrayGenerator
  * with a regex matching userInput for [+/-][number]x^[number]
@@ -57,28 +57,48 @@ console.log(arrayGenerator(userInput.match(regex)));
 polynomialArray = arrayGenerator(userInput.match(regex));
 console.log(polynomialArray);
 
-console.log(arrayGenerator("2x^1+123".match(regex)));
+//console.log(arrayGenerator("2x^1+123".match(regex)));
 
-// inserts missing entries for consistency
-function insertMissing(polynomial) {
+/* inserts missing entries for consistency
+ * checks if power for each monomial object exist, 
+ * if so, then equal passed array element as element
+ * of insertedPolyArray
+ * if not, create a new object entry for insertedPolyArray
+*/
+  function insertMissing(polynomial) {
   let insertedPolyArray = [];
-
-  polynomial.map((monomial) => {
-    if(monomial.power){}
-  });
-  for(let i = 0; i < polynomial.length; ++i) {
-    let diff = polynomial[i].power - polynomial[i+1].power == 1;
-    if ((diff) && polynomial[i+1]+diff == array[i+2]) {
-      // must push to new array old array elements
-      //insertedPolyArray =  polynomial.splice(i, 0, {coefficient: 0, power: polynomial[i].power-1});
+  let power = polynomial[0].power;
+  
+  for(let i = 0; i <= power; ++i) {
+    let powerExists = polynomial.find(function(monomial) {
+      return monomial.power === power - i;
+    });
+    if(powerExists) {
+      insertedPolyArray[i] = polynomial.shift(); 
+    } else {
+      insertedPolyArray[i] = {coefficient: 0, power: power-i};
     }
   }
   return insertedPolyArray;
-  //return polynomial;
 }
 
-insertMissing(polynomialArray);
+//insertMissing(polynomialArray);
+polynomialArray = insertMissing(polynomialArray); 
 console.log(polynomialArray);
+
+polynomialArray = addition(polynomialArray);
+console.log(polynomialArray);
+
+//fetches command from user 
+/*if (prompt) { 
+
+} else if() { 
+
+} else if() {
+
+} else if() { 
+
+}*/
 
 //printOut(userInput);
 // ^ requires node js
@@ -90,14 +110,6 @@ polynomialArray.sort((monomial1, monomial2) => {
 
 console.log(polynomialArray);
 */
-
-/* function(polynomialProps) {
-  if(polynomialProps[1] != null) {
-    return parseInt(PolynomialProps[1]);
-  } else {
-    return 0;
-  } */
-
 
   /*
   * Functions to be written
@@ -113,5 +125,4 @@ console.log(polynomialArray);
   * integral
   */
 
-  // module.exports = arrayGenerator;
-  // for node.js
+

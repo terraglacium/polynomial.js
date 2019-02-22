@@ -7,8 +7,7 @@
 
 function degree(array) {
     console.log(array);
-
-    // search algo for largest degree object
+    console.log(`The degree of this polynomial is ${array[0].power}`);
 }
 
 module.exports = degree;
