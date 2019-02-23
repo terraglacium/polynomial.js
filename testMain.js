@@ -14,7 +14,7 @@ const addition = require("./functions/addition.js");
 const subtraction = require("./functions/subtraction.js");
 const derivative = require("./functions/derivative.js");
 //import { printOut } from './functions/printOut.js';
-const regex = /[+-]?\d+x\^\d+|[+-\s]\d+/g;
+const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 /* new regex /[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]|\d+/g
  * prev regex /[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]/g
  * excessive regex /[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]|[+-]x\^\d|[+-]?x/g
@@ -93,7 +93,7 @@ function insertMissing(polynomial) {
 polynomialArray = insertMissing(polynomialArray);
 console.log(polynomialArray);
 
-polynomialArray = addition(polynomialArray);
+polynomialArray = subtraction(polynomialArray);
 console.log(polynomialArray);
 
 let testDer = derivative(insertMissing(arrayGenerator("1x^2".match(regex))));
@@ -129,11 +129,13 @@ console.log(polynomialArray);
   * degree - done
   * arrayToString
   * factor
-  * add - evaluate for empty {}
-  * subtract from orig poly - evaluate for empty {}
+  * add - evaluate for empty {} poly and empty first entry
+  * subtract from orig poly - evaluate for empty {} poly and empty first array
   * multiply
   * division (synthetic)
   * division (long division)
   * derivative (to the first derivative)
   * integral
   */
+
+  // clean up all this spaghet 

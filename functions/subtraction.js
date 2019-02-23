@@ -2,7 +2,7 @@
 
 const arrayGenerator = require("./arrayGenerator.js");
 const insertMissing = require("./insertMissing.js");
-const regex = /[+-]?\d+x\^\d+|[+-\s]\d+/g;
+const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 /*
  * Subtraction function:
@@ -17,11 +17,12 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]\d+/g;
 
 function subtraction(polyArray){
   //let userInput = prompt("Input a function to be added", "1x^1+1");
-  let userInput = "-4x^3+6x^2+2x^1+3x^7+8x^8-888";
+  let userInput = "1";
+  let userInput1 = "-4x^3+6x^2+2x^1+3x^7+8x^8-888";
   let userInput2 = "1x^2+1";
   let subtractedPoly = [];
   subtractedPoly = arrayGenerator(userInput.match(regex));
-  subtractedPoly = insertMissing(addedPoly);
+  subtractedPoly = insertMissing(subtractedPoly);
 
   if(subtractedPoly.length < polyArray.length) {
     // for loop iterating through param array
@@ -48,7 +49,7 @@ function subtraction(polyArray){
     for(let i = 0; i < subtractedPoly.length; ++i){
       // for loop iterating over param array
       // find matching power if degrees vary
-      for(let j = 0; i < polyArray[i].length; ++j){
+      for(let j = 0; j < polyArray.length; ++j){
         // only subtract the two coefficients if their powers match
         // else is to modulate 0x^n aka 0 - subtractedPoly[i]
         if(polyArray[j].power === subtractedPoly[i].power) {
