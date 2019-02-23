@@ -1,0 +1,25 @@
+{
+  "name": "polynomial",
+  "version": "1.0.0",
+  "description": "polynomial calculator script/algorithms",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terraglacium/polynomial.js.git"
+  },
+  "author": "Andy Ren",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/terraglacium/polynomial.js/issues"
+  },
+  "homepage": "https://github.com/terraglacium/polynomial.js#readme",
+  "devDependencies": {
+    "eslint": "^5.14.1"
+  },
+  "dependencies": {
+    "browserify": "^16.2.3"
+  }
+}
