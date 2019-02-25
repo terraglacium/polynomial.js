@@ -2,6 +2,7 @@
 
 const arrayGenerator = require("./arrayGenerator.js");
 const insertMissing = require("./insertMissing.js");
+const removeZeroes = require("./removeZeroes.js");
 const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 /*
@@ -10,9 +11,9 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
  * Takes in another array within the function to be subtracted from
  * The two arrays are passed into a conditional block:
  * Three conditions used for subtracting polynomials:
- * 1. When subtractedPoly.length < polyarray.length
- * 2. When subtractedPoly.length === polyarray.length
- * 3. When subtractedPoly.length > polyarray.length
+ * 1. When subtractedPoly.length < polyArray.length (if)
+ * 2. When subtractedPoly.length === polyArray.length (else if)
+ * 3. When subtractedPoly.length > polyArray.length (else)
 */
 
 function subtraction(polyArray){

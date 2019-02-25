@@ -2,6 +2,7 @@
 
 /*
  * Derivative function:
+ * @param = polyArray
  * for loop cycles through array
  * Derivatives for polynomials == nx^n-1
  * Set coefficient of array = orig coeff * array power

@@ -1,7 +1,7 @@
 /*
- * @file main.js
- * @author Andy Ren (a.k.a @terraglacium)
- * @license apache
+ * @file: main.js
+ * @author: Andy Ren (a.k.a @terraglacium)
+ * @license: apache 2.0
  * @comment: use -4x^3+6x^2+2x^1+3x^7+8x^8-888 as test!
  */
 
@@ -30,7 +30,7 @@ let polynomialArray = [];
  * Takes in an .match(regex) array
  * forEach(monomial) breaks down each entry of the "polynomial" param
  * array into an array of objects containing props "coefficient" and "power"
- * polynomialProps is an array with the monomial split
+ * PolynomialProps is an array with the monomial split
 */
 function arrayGenerator(polynomial) {
   let localPolyArray = [];
@@ -125,17 +125,19 @@ console.log(polynomialArray);
   * Functions to be written
   * arrayGenerator - done
   * insertMissing - done
+  * removeZeroes - done
   * printOut - done
   * degree - done
-  * arrayToString
+  * evaluate
+  * stringGenerator
   * factor
   * add - evaluate for empty {} poly and empty first entry
   * subtract from orig poly - evaluate for empty {} poly and empty first array
-  * multiply
+  * multiply - done
   * division (synthetic)
   * division (long division)
-  * derivative (to the first derivative)
+  * derivative (to the first derivative) - done
   * integral
   */
 
-  // clean up all this spaghet 
+  // clean up all this spaghet

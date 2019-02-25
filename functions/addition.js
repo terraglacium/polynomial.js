@@ -2,6 +2,7 @@
 
 const arrayGenerator = require("./arrayGenerator.js");
 const insertMissing = require("./insertMissing.js");
+const removeZeroes = require("./removeZeroes.js");
 const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 /*
@@ -10,9 +11,9 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
  * Takes in another array within the function to be added
  * The two arrays are passed into a conditional block:
  * Three conditions used for adding polynomials:
- * 1. When addedPoly.length < polyarray.length (if)
- * 2. When addedPoly.length === polyarray.length (else if)
- * 3 .When addedPoly.length > polyarray.length (else)
+ * 1. When addedPoly.length < polyArray.length (if)
+ * 2. When addedPoly.length === polyArray.length (else if)
+ * 3 .When addedPoly.length > polyArray.length (else)
  * Remind user to put 0x^power when writing out an eq
  * ^ not required since insertMissing() implemented
  */
