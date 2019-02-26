@@ -7,7 +7,7 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 /*
  * Subtraction function:
- * @param = polyArray
+ * @param: polyArray
  * Takes in another array within the function to be subtracted from
  * The two arrays are passed into a conditional block:
  * Three conditions used for subtracting polynomials:
@@ -37,14 +37,13 @@ function subtraction(polyArray){
         }
       }
     }
-    return polyArray;
+    //return polyArray;
   } else if (subtractedPoly.length === polyArray.length) {
     // for loop iterating through param array
     for(let i = 0; i < polyArray.length; ++i) {
       polyArray[i].coefficient -= subtractedPoly[i].coefficient;
     }
-    // removing 0 objects?
-    return polyArray;
+    //return polyArray;
   } else {
     // for loop iterating through subtracted array
     for(let i = 0; i < subtractedPoly.length; ++i){
@@ -60,9 +59,11 @@ function subtraction(polyArray){
         }
       }
     }
-    // removing 0 objects?
-    return subtractedPoly;
+    polyArray = subtractedPoly;
+    //return subtractedPoly;
   }
+  polyArray = removeZeroes(polyArray);
+  return polyArray;
 
 }
 

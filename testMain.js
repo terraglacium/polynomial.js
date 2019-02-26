@@ -1,5 +1,5 @@
 /*
- * @file: main.js
+ * @file: testMain.js
  * @author: Andy Ren (a.k.a @terraglacium)
  * @license: apache 2.0
  * @comment: use -4x^3+6x^2+2x^1+3x^7+8x^8-888 as test!
@@ -10,9 +10,12 @@
 // ^ for readfilesync
 const printOut = require("./functions/printOut.js");
 const degree = require("./functions/degree.js");
+const stringGenerator = require("./functions/stringGenerator.js");
 const addition = require("./functions/addition.js");
 const subtraction = require("./functions/subtraction.js");
+const multiply = require("./functions/multiply.js");
 const derivative = require("./functions/derivative.js");
+const evaluate = require("./functions/evaluate.js");
 //import { printOut } from './functions/printOut.js';
 const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 /* new regex /[+-]?\d+x\^\d+|[+-\s]\d+[+-\s]|\d+/g
@@ -128,11 +131,11 @@ console.log(polynomialArray);
   * removeZeroes - done
   * printOut - done
   * degree - done
-  * evaluate
-  * stringGenerator
+  * evaluate - done
+  * stringGenerator - add descriptions and test for edge cases
   * factor
-  * add - evaluate for empty {} poly and empty first entry
-  * subtract from orig poly - evaluate for empty {} poly and empty first array
+  * addition - done
+  * subtraction from orig poly - evaluate for empty {} poly and empty first array
   * multiply - done
   * division (synthetic)
   * division (long division)
@@ -140,4 +143,5 @@ console.log(polynomialArray);
   * integral
   */
 
+  // note: always assign old array to new result
   // clean up all this spaghet

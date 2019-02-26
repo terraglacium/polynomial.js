@@ -46,7 +46,7 @@ function addition(polyArray) {
       }
     }
     console.log(polyArray);
-    return polyArray;
+    //return polyArray;
   } else if (addedPoly.length === polyArray.length) {
     // for loop iterating through param array
     for(let i = 0; i < addedPoly.length; ++i) {
@@ -54,27 +54,25 @@ function addition(polyArray) {
         polyArray[i].coefficient += addedPoly[i].coefficient;
     }
     console.log(polyArray);
-    return polyArray;
+    //return polyArray;
   } else {
     //for loop iterating through added array
     for(let i = 0; i < addedPoly.length ; ++i) {
-      //console.log(addedPoly[i].power);
-      //console.log(polyArray.length);
       // for loop iterating over param array
       // find matching power if degrees vary
       for (let j = 0 ; j < polyArray.length; ++j) {
-        //console.log(addedPoly[i]);
-        //console.log(j);
-        //console.log(polyArray[j]);
         // only add the two coefficients if their powers match
-        if(polyArray[j].power === addedPoly[i].power){
+        if(polyArray[j].power === addedPoly[i].power) {
           addedPoly[i].coefficient += polyArray[j].coefficient;
         }
       }
     }
     console.log(addedPoly);
-    return addedPoly;
+    polyArray = addedPoly;
+    //return addedPoly;
   }
+  removeZeroes(polyArray);
+  return polyArray;
 
 }
 

@@ -9,7 +9,7 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
  * Multiplication function:
  * @param: polyArray
  * Takes in another array within the function to be multiplied
- * Creates an array
+ * Creates an additional result array
  * The two arrays are passed into a conditional block:
  * Three conditions used for multiplying polynomials:
  * 1. When multipliedPoly.length < polyarray.length or multipliedPoly.length > polyarray.length
