@@ -6,7 +6,7 @@
  * Takes in a polyArray, and a number to be evaluated
  * The two arrays are passed into a conditional block:
  * for loop iterates through each term, and adds to sum variable
- * Returns sum variable
+ * Returns sum 
 */
 
 function evaluate(polyArray, number) {

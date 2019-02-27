@@ -18,6 +18,7 @@ const addition = require("./functions/addition.js");
 const subtraction = require("./functions/subtraction.js");
 const multiply = require("./functions/multiply.js");
 const derivative = require("./functions/derivative.js");
+const integral = require("./functions/integral.js");
 
 const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 

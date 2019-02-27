@@ -5,7 +5,9 @@
  * Takes in an .match(regex) array
  * forEach(monomial) breaks down each entry of the "polynomial" param
  * array into an array of objects containing props "coefficient" and "power"
- * polynomialProps is an array with the monomial split
+ * PolynomialProps is an array with the monomial split
+ * Sort the array in descending order
+ * Return the array
 */
 
 function arrayGenerator(polynomial) {

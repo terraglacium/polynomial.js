@@ -1,10 +1,13 @@
 "use strict";
 
-/* inserts missing entries for consistency
- * checks if power for each monomial object exist,
- * if so, then equal passed array element as element
+/*
+ * insertMissing Function
+ * Inserts missing entries for consistency
+ * Checks if power for each monomial object exist,
+ * If so, then equal passed array element as element
  * of insertedPolyArray
- * if not, create a new object entry for insertedPolyArray
+ * If not, create a new object entry for insertedPolyArray
+ * Return insertedPolyArray
 */
 
 function insertMissing(polynomial) {

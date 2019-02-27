@@ -16,6 +16,7 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
  * 3 .When addedPoly.length > polyArray.length (else)
  * Remind user to put 0x^power when writing out an eq
  * ^ not required since insertMissing() implemented
+ * Return polyArray
  */
 
 function addition(polyArray) {

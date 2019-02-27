@@ -14,6 +14,7 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
  * 1. When subtractedPoly.length < polyArray.length (if)
  * 2. When subtractedPoly.length === polyArray.length (else if)
  * 3. When subtractedPoly.length > polyArray.length (else)
+ * Return polyArray
 */
 
 function subtraction(polyArray){

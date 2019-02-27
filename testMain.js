@@ -135,12 +135,11 @@ console.log(polynomialArray);
   * stringGenerator - add descriptions and test for edge cases
   * factor
   * addition - done
-  * subtraction from orig poly - evaluate for empty {} poly and empty first array
-  * multiply - done
+  * subtraction from orig poly - done
   * division (synthetic)
   * division (long division)
   * derivative (to the first derivative) - done
-  * integral
+  * integral - done
   */
 
   // note: always assign old array to new result

@@ -15,7 +15,7 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
  * 1. When multipliedPoly.length < polyarray.length or multipliedPoly.length > polyarray.length
  * 2. When multipliedPoly.length === polyarray.length
  * Terms with the same power will be combined
- * Result array returned
+ * Return result 
  */
 
 function multiply(polyArray) {

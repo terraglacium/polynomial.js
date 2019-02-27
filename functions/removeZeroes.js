@@ -10,6 +10,7 @@
  * 2. Else, it checks two conditions:
  * if the leading term coeff == 0, shift it out and recursively continue to check next term
  * else, this means that the leading term coeff != 0, so return array
+ * Return polyArray if base case reached or no 0 leading terms left
 */
 
 function removeZeroes(polyArray) {

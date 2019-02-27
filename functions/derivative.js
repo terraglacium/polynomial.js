@@ -8,6 +8,7 @@
  * Set coefficient of array = orig coeff * array power
  * Set array power - 1
  * Pop last element as it becomes extra 0th degree
+ * Return polyArray
 */
 
 function derivative(polyArray) {
