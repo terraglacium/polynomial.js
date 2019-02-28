@@ -6,8 +6,9 @@
 /*export*/
 
 function degree(polyArray) {
-    console.log(polyArray);
-    console.log(`The degree of this polynomial is ${array[0].power}`);
+    //console.log(polyArray);
+    //console.log(`The degree of this polynomial is ${polyArray[0].power}`);
+    return polyArray[0].power;
 }
 
 module.exports = degree;

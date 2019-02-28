@@ -1,7 +1,8 @@
 "use strict";
 
 /*
- * Function arrayGenerator:
+ * arrayGenerator function:
+ * @param: String.match(regex) -> polynomial
  * Takes in an .match(regex) array
  * forEach(monomial) breaks down each entry of the "polynomial" param
  * array into an array of objects containing props "coefficient" and "power"

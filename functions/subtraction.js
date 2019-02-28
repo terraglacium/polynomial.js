@@ -7,24 +7,25 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 /*
  * Subtraction function:
- * @param: polyArray
+ * @param: polyArray, subtractedPoly
  * Takes in another array within the function to be subtracted from
  * The two arrays are passed into a conditional block:
  * Three conditions used for subtracting polynomials:
  * 1. When subtractedPoly.length < polyArray.length (if)
  * 2. When subtractedPoly.length === polyArray.length (else if)
  * 3. When subtractedPoly.length > polyArray.length (else)
- * Return polyArray
+ * Returns polyArray
 */
 
-function subtraction(polyArray){
+function subtraction(polyArray, subtractedPoly){
   //let userInput = prompt("Input a function to be added", "1x^1+1");
-  let userInput = "1";
+  /*let userInput = "1";
   let userInput1 = "-4x^3+6x^2+2x^1+3x^7+8x^8-888";
   let userInput2 = "1x^2+1";
   let subtractedPoly = [];
   subtractedPoly = arrayGenerator(userInput.match(regex));
   subtractedPoly = insertMissing(subtractedPoly);
+  */
 
   if(subtractedPoly.length < polyArray.length) {
     // for loop iterating through param array

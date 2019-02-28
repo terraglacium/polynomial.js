@@ -8,6 +8,7 @@
 "use strict";
 // const fs = require('fs');
 // ^ for readfilesync
+const polyObjectGenerator = require("./functions/polyObjectGenerator.js");
 const printOut = require("./functions/printOut.js");
 const degree = require("./functions/degree.js");
 const stringGenerator = require("./functions/stringGenerator.js");
@@ -126,6 +127,7 @@ console.log(polynomialArray);
 
   /*
   * Functions to be written
+  * arrayInput
   * arrayGenerator - done
   * insertMissing - done
   * removeZeroes - done
@@ -143,4 +145,6 @@ console.log(polynomialArray);
   */
 
   // note: always assign old array to new result
+  // note, replace addition, subtraction, multiply, division functions
+  // with two params
   // clean up all this spaghet

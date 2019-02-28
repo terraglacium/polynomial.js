@@ -7,7 +7,7 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 /*
  * Multiplication function:
- * @param: polyArray
+ * @param: polyArray, multipliedPoly
  * Takes in another array within the function to be multiplied
  * Creates an additional result array
  * The two arrays are passed into a conditional block:
@@ -15,14 +15,15 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
  * 1. When multipliedPoly.length < polyarray.length or multipliedPoly.length > polyarray.length
  * 2. When multipliedPoly.length === polyarray.length
  * Terms with the same power will be combined
- * Return result 
+ * Returns result
  */
 
-function multiply(polyArray) {
-  let userInput = "1x^1+2";
+function multiply(polyArray, multipliedPoly) {
+  /*let userInput = "1x^1+2";
   let multipliedPoly = [];
   multipliedPoly = arrayGenerator(userInput.match(regex));
   multipliedPoly = insertMissing(multipliedPoly);
+  */
 
   let result = [];
 

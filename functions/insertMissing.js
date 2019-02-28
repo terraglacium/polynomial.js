@@ -1,7 +1,8 @@
 "use strict";
 
 /*
- * insertMissing Function
+ * insertMissing function
+ * @param: polynomial (array)
  * Inserts missing entries for consistency
  * Checks if power for each monomial object exist,
  * If so, then equal passed array element as element

@@ -7,7 +7,7 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 /*
  * Addition function:
- * @param = polyArray
+ * @param = polyArray, addedPoly
  * Takes in another array within the function to be added
  * The two arrays are passed into a conditional block:
  * Three conditions used for adding polynomials:
@@ -16,16 +16,17 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
  * 3 .When addedPoly.length > polyArray.length (else)
  * Remind user to put 0x^power when writing out an eq
  * ^ not required since insertMissing() implemented
- * Return polyArray
+ * Returns polyArray
  */
 
-function addition(polyArray) {
-    //let userInput = prompt("Input a function to be added", "1x^1+1");
-  let userInput = "-4x^3+6x^2+2x^1+3x^7+8x^8-888";
+function addition(polyArray, addedPoly) {
+  //let userInput = prompt("Input a function to be added", "1x^1+1");
+  /*let userInput = "-4x^3+6x^2+2x^1+3x^7+8x^8-888";
   let userInput2 = "1x^2+1";
   let addedPoly = [];
   addedPoly = arrayGenerator(userInput.match(regex));
   addedPoly = insertMissing(addedPoly);
+  */
 
   //console.log(polyArray.length);
   console.log(addedPoly.length);

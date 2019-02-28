@@ -10,6 +10,7 @@
 const arrayGenerator = require("./functions/arrayGenerator.js");
 const insertMissing = require("./functions/insertMissing.js");
 const removeZeroes = require("./functions/removeZeroes.js");
+const polyObjectGenerator = require("./functions/polyObjectGenerator.js");
 const printOut = require("./functions/printOut.js");
 const degree = require("./functions/degree.js");
 const evaluate = require("./functions/evaluate.js");

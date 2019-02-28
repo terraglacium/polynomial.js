@@ -1,11 +1,15 @@
 "use strict";
 
-// using "export" for browser
-// cors req using ^
-// browserify for node?
-/*export*/
+const stringGenerator = require("./stringGenerator.js");
+/*
+ * printOut function:
+ * @param = polyArray
+ * Prints out the string of polyArray
+ */
 
-function printOut(string) {
+function printOut(polyArray) {
+    console.log(polyArray);
+    let string = stringGenerator(polyArray);
     console.log(string);
 }
 
