@@ -1,10 +1,11 @@
 {
   "name": "polynomial",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "polynomial calculator script/algorithms",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",

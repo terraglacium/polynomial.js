@@ -2,10 +2,13 @@
  * @file: main.js
  * @author: Andy Ren (a.k.a @terraglacium)
  * @license: apache 2.0
- * @comment: use -4x^3+6x^2+2x^1+3x^7+8x^8-888 as test!
+ * @version: 0.9.0
+ * @comment: 1. divide is currently broken, 2. run using npm start
  */
 
 "use strict";
+
+const readlineSync = require("readline-sync");
 
 const arrayGenerator = require("./functions/arrayGenerator.js");
 const insertMissing = require("./functions/insertMissing.js");
@@ -23,5 +26,57 @@ const integral = require("./functions/integral.js");
 
 const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
-let userInput = "1x^2+1";
-let polynomialArray = [];
+//let userInput = "";
+let polyArray = [];
+//let polyString = "";
+//let secondPolyString = "";
+//let secondPoly = [];
+//let polynomialArray = [];
+
+//input here -->
+
+console.log("Welcome to polynomial.js!");
+console.log("Please first input a polynomial using 'poly'");
+
+readlineSync.promptCLLoop({
+  poly: function(polyString) {
+    polyArray = polyObjectGenerator(polyString);
+  },
+  printOut: function() {
+    printOut(polyArray);
+  },
+  degree: function() {
+    console.log(`The degree of the polynomial is: ${degree(polyArray)}`);
+  },
+  evaluate: function(x) {
+    console.log(`When x = ${x}, f(x) = ${evaluate(polyArray, x)}`);
+  },
+  addition: function(secondPolyString) {
+    let secondPoly = polyObjectGenerator(secondPolyString);
+    polyArray = addition(polyArray, secondPoly);
+  },
+  subtraction: function(secondPolyString) {
+    let secondPoly = polyObjectGenerator(secondPolyString);
+    polyArray = subtraction(polyArray, secondPoly);
+  },
+  multiply: function(secondPolyString) {
+    let secondPoly = polyObjectGenerator(secondPolyString);
+    polyArray = multiply(polyArray, secondPoly);
+  },
+  divide: function() {
+    console.log("WIP currently");
+  },
+  derivative: function() {
+    polyArray = derivative(polyArray);
+  },
+  integral: function() {
+    polyArray = integral(polyArray);
+  },
+  exit: function() { return true; }
+
+},{prompt : "input :>", limitMessage: "Error: illegal command",});
+
+console.log("Exiting polynomial.js...");
+setTimeout( function(){
+    console.log('Complete!')
+},3000);

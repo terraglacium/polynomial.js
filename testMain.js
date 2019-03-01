@@ -148,3 +148,45 @@ console.log(polynomialArray);
   // note, replace addition, subtraction, multiply, division functions
   // with two params
   // clean up all this spaghet
+
+
+  /*while(userInput != "exit") {
+    let polyString = "";
+    let secondPolyString = "";
+    let secondPoly = [];
+
+    if(userInput == "poly") {
+      //input commmand
+      polyArray = polyObjectGenerator(polyString);
+    } else if(userInput == "printOut") {
+      polyString = printOut(polyArray);
+    } else if(userInput == "degree") {
+      degree(polyArray);
+    } else if(userInput == "evaluate") {
+      //input command for x
+      console.log(`When x = ${x}, f(x) = ${evaluate(polyArray, x)}`);
+    } else if(userInput == "addition") {
+      secondPolyString = "";
+      //input
+      secondPoly = polyObjectGenerator(secondPolyString);
+      polyArray = addition(polyArray, secondPoly);
+    } else if(userInput == "subtraction") {
+      secondPolyString = "";
+      //input
+      secondPoly = polyObjectGenerator(secondPolyString);
+      polyArray = subtraction(polyArray, secondPoly);
+    } else if(userInput == "multiply") {
+      secondPolyString = "";
+      //input
+      secondPoly = polyObjectGenerator(secondPolyString);
+      polyArray = multiply(polyArray, secondPoly);
+    } else if(userInput == "derivative") {
+       polyArray = derivative(polyArray);
+    } else if(userInput == "integral") {
+      polyArray = integral(polyArray);
+    } else if(userInput == "exit") {}
+
+    else {
+      console.log("Error: illegal command");
+    }
+  }*/
