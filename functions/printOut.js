@@ -8,7 +8,7 @@ const stringGenerator = require("./stringGenerator.js");
  */
 
 function printOut(polyArray) {
-    console.log(polyArray);
+    //console.log(polyArray);
     let string = stringGenerator(polyArray);
     console.log(string);
 }

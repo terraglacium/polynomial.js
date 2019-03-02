@@ -14,8 +14,14 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 function polyObjectGenerator(string) {
   let polyArray = [];
-  polyArray = arrayGenerator(string.match(regex));
-  polyArray = insertMissing(polyArray);
+  try { 
+    polyArray = arrayGenerator(string.match(regex));
+    polyArray = insertMissing(polyArray);
+
+  } catch(error) {
+    //console.log(error);
+    console.log("Error: Please input a polynomial");
+  }
 
   return polyArray;
 }

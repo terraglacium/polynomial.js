@@ -2,7 +2,7 @@
  * @file: main.js
  * @author: Andy Ren (a.k.a @terraglacium)
  * @license: apache 2.0
- * @version: 0.9.0
+ * @version: 0.9.2
  * @comment: 1. divide is currently broken, 2. run using npm start
  */
 
@@ -37,6 +37,7 @@ let polyArray = [];
 
 console.log("Welcome to polynomial.js!");
 console.log("Please first input a polynomial using 'poly'");
+console.log("Polynomial Format: ax^n+...+C");
 
 readlineSync.promptCLLoop({
   poly: function(polyString) {
@@ -72,6 +73,7 @@ readlineSync.promptCLLoop({
   integral: function() {
     polyArray = integral(polyArray);
   },
+  help : function(){},
   exit: function() { return true; }
 
 },{prompt : "input :>", limitMessage: "Error: illegal command",});
