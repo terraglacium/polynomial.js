@@ -94,13 +94,13 @@ readlineSync.promptCLLoop({
   },
   derivative: function() {
     polyArray = derivative(polyArray);
-    if(!polyEmptyCheck) {
+    if(!polyEmptyCheck(polyArray)) {
       printOut(polyArray);
     }
   },
   integral: function() {
     polyArray = integral(polyArray);
-    if(!polyEmptyCheck) {
+    if(!polyEmptyCheck(polyArray)) {
       printOut(polyArray);
     }
   },

@@ -1,5 +1,6 @@
 "use strict";
 
+const insertMissing = require("./insertMissing.js");
 const polyEmptyCheck = require("./polyEmptyCheck.js");
 
 /*
@@ -10,6 +11,7 @@ const polyEmptyCheck = require("./polyEmptyCheck.js");
  * Set coefficient of term = orig coeff * (1/(array power+1))
  * Set term power = ++power
  * Return polyArray
+ * @bug: breaks after taking derivative of a constant or power: 0
 */
 
 function integral(polyArray) {
@@ -19,6 +21,7 @@ function integral(polyArray) {
     polyArray[i].coefficient = polyArray[i].coefficient * (1/(polyArray[i].power + 1));
     ++polyArray[i].power;
   }
+  polyArray = insertMissing(polyArray);
   return polyArray;
 
 }
