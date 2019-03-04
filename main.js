@@ -2,7 +2,7 @@
  * @file: main.js
  * @author: Andy Ren (a.k.a @terraglacium)
  * @license: apache 2.0
- * @version: 0.9.2
+ * @version: 0.9.6
  * @comment: 1. divide is currently broken, 2. run using npm start
  */
 
@@ -38,8 +38,9 @@ let polyArray = [];
 //input here -->
 
 console.log("Welcome to polynomial.js!");
-console.log("Please first input a polynomial using 'poly'");
-console.log("Polynomial Format: ax^n+...+C");
+console.log("Please first input a polynomial using 'poly'.");
+console.log("Polynomial Format: 'ax^n+...+C'.");
+console.log("If you need help, input 'help ~'");
 
 readlineSync.promptCLLoop({
   poly: function(polyString) {
@@ -49,38 +50,70 @@ readlineSync.promptCLLoop({
     printOut(polyArray);
   },
   degree: function() {
-    console.log(`The degree of the polynomial is: ${degree(polyArray)}`);
+    if(!polyEmptyCheck(polyArray)) {
+      console.log(`The degree of the polynomial is: ${degree(polyArray)}. \n`);
+    }
   },
   evaluate: function(x) {
-    console.log(`When x = ${x}, f(x) = ${evaluate(polyArray, x)}`);
+    if(!polyEmptyCheck(polyArray)) {
+      console.log(`When x = ${x}, f(x) = ${evaluate(polyArray, x)}. \n`);
+    }
   },
   addition: function(secondPolyString) {
     let secondPoly = polyObjectGenerator(secondPolyString);
+    if(secondPoly === false) {
+      console.log("Usage: addition [second polynomial] \n");
+      polyEmptyCheck(polyArray);
+      return;
+    }
     polyArray = addition(polyArray, secondPoly);
+    printOut(polyArray);
   },
   subtraction: function(secondPolyString) {
     let secondPoly = polyObjectGenerator(secondPolyString);
+    if(secondPoly === false) {
+      console.log("Usage: subtraction [second polynomial] \n");
+      polyEmptyCheck(polyArray);
+      return;
+    }
     polyArray = subtraction(polyArray, secondPoly);
+    printOut(polyArray);
   },
   multiply: function(secondPolyString) {
     let secondPoly = polyObjectGenerator(secondPolyString);
+    if(secondPoly === false) {
+      console.log("Usage: multiply [second polynomial] \n");
+      polyEmptyCheck(polyArray);
+      return;
+    }
     polyArray = multiply(polyArray, secondPoly);
+    printOut(polyArray);
   },
   divide: function() {
-    console.log("WIP currently");
+    console.log("WIP currently.");
   },
   derivative: function() {
     polyArray = derivative(polyArray);
+    if(!polyEmptyCheck) {
+      printOut(polyArray);
+    }
   },
   integral: function() {
     polyArray = integral(polyArray);
+    if(!polyEmptyCheck) {
+      printOut(polyArray);
+    }
   },
   help : function(command){
-    help(command); 
+    try {
+      help(command.toLowerCase());
+    } catch(error) {
+      help(command);
+    }
   },
   exit: function() { return true; }
 
-},{prompt : "input :>", limitMessage: "Error: illegal command",});
+},{prompt : "input :>", limitMessage: "@Error: Illegal command.",});
 
 console.log("Exiting polynomial.js...");
 setTimeout( function(){

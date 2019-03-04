@@ -14,16 +14,23 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 function polyObjectGenerator(string) {
   let polyArray = [];
-  try { 
+  try {
     polyArray = arrayGenerator(string.match(regex));
     polyArray = insertMissing(polyArray);
-
+    return polyArray;
   } catch(error) {
-    //console.log(error);
-    console.log("Error: Please input a polynomial");
+    //console.log(error.message);
+    if(error.message.search("undefined") != -1)
+    {
+      console.log("@Error: Empty polynomial.");
+      console.log("Please input a polynomial.");
+    } else if(error.message.search("null") != -1) {
+      console.log("@Error: Invalid characters entered");
+      console.log("Please follow polynomial format: ax^n+...+1");
+    }
+    return false;
   }
 
-  return polyArray;
 }
 
 module.exports = polyObjectGenerator;

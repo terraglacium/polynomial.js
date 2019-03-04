@@ -7,6 +7,13 @@ const polyEmptyCheck = require("./polyEmptyCheck.js");
 // browserify for node?
 /*export*/
 
+/*
+ * Degree function:
+ * @param: polyArray
+ * Takes in a polyArray
+ * Returns leading term power
+*/
+
 function degree(polyArray) {
     if(polyEmptyCheck(polyArray)) return;
     //console.log(polyArray);

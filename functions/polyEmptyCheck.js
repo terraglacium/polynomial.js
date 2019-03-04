@@ -10,8 +10,9 @@
 
 
 function polyEmptyCheck(polyArray) {
-  if(polyArray.length < 1 || polyArray == undefined){
-    console.log("Please input a polynomial using 'poly [polynomial]' first");
+  if(polyArray == undefined || polyArray == false || polyArray.length < 1){
+    console.log("@Error: No initial polynomial stored.");
+    console.log("Please input a polynomial using 'poly [polynomial]' first.");
     return true;
   }
   return false;

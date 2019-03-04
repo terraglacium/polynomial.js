@@ -127,7 +127,7 @@ console.log(polynomialArray);
 
   /*
   * Functions to be written
-  * arrayInput
+  * polyObjectGenerator - done
   * arrayGenerator - done
   * insertMissing - done
   * removeZeroes - done
