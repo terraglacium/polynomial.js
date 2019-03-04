@@ -1,5 +1,7 @@
 "use strict";
 
+const polyEmptyCheck = require("./polyEmptyCheck.js");
+
 /*
  * Derivative function:
  * @param = polyArray
@@ -12,6 +14,8 @@
 */
 
 function derivative(polyArray) {
+  if(polyEmptyCheck(polyArray)) return;
+
   for (let i = 0; i < polyArray.length; ++i) {
     polyArray[i].coefficient *= polyArray[i].power;
     polyArray[i].power -= 1;

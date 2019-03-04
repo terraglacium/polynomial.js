@@ -3,6 +3,7 @@
 const arrayGenerator = require("./arrayGenerator.js");
 const insertMissing = require("./insertMissing.js");
 const removeZeroes = require("./removeZeroes.js");
+const polyEmptyCheck = require("./polyEmptyCheck.js");
 const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 /*
@@ -27,6 +28,8 @@ function subtraction(polyArray, subtractedPoly){
   subtractedPoly = insertMissing(subtractedPoly);
   */
 
+  if(polyEmptyCheck(polyArray)) return;
+  
   if(subtractedPoly.length < polyArray.length) {
     // for loop iterating through param array
     for(let i = 0; i < polyArray.length; ++i) {

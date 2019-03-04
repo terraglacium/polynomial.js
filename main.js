@@ -23,6 +23,8 @@ const subtraction = require("./functions/subtraction.js");
 const multiply = require("./functions/multiply.js");
 const derivative = require("./functions/derivative.js");
 const integral = require("./functions/integral.js");
+const help = require("./functions/help.js");
+const polyEmptyCheck = require("./functions/polyEmptyCheck.js");
 
 const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
@@ -73,7 +75,9 @@ readlineSync.promptCLLoop({
   integral: function() {
     polyArray = integral(polyArray);
   },
-  help : function(){},
+  help : function(command){
+    help(command); 
+  },
   exit: function() { return true; }
 
 },{prompt : "input :>", limitMessage: "Error: illegal command",});

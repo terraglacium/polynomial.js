@@ -1,5 +1,7 @@
 "use strict";
 
+const polyEmptyCheck = require("./polyEmptyCheck.js");
+
 /*
  * Integral function:
  * @param = polyArray
@@ -11,6 +13,8 @@
 */
 
 function integral(polyArray) {
+  if(polyEmptyCheck(polyArray)) return;
+
   for(let i = 0; i < polyArray.length; ++i) {
     polyArray[i].coefficient = polyArray[i].coefficient * (1/(polyArray[i].power + 1));
     ++polyArray[i].power;

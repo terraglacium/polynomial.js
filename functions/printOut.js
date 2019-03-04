@@ -1,5 +1,6 @@
 "use strict";
 
+const polyEmptyCheck = require("./polyEmptyCheck.js");
 const stringGenerator = require("./stringGenerator.js");
 /*
  * printOut function:
@@ -9,6 +10,8 @@ const stringGenerator = require("./stringGenerator.js");
 
 function printOut(polyArray) {
     //console.log(polyArray);
+    if(polyEmptyCheck(polyArray)) return;
+
     let string = stringGenerator(polyArray);
     console.log(string);
 }
