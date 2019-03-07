@@ -1,5 +1,7 @@
 "use strict";
 
+const removeZeroes = require("./removeZeroes.js");
+
 /*
  * stringGenerator function:
  * @param: polyArray
@@ -26,13 +28,18 @@ function stringGenerator(polyArray) {
     }
 
   }); */
+  //if(polyArray.length > 1) "hard code removeZeroes"
+  //console.log(polyArray);
+  polyArray = removeZeroes(polyArray);
 
   for(let i = 0; i < polyArray.length; ++i){
     //let counter = polyArray.length+1;
-    // if coefficient of the monomimal === 0, skip the iteration
-    if(polyArray[i].coefficient === 0) {
+    // if coefficient of the monomimal === 0 AND polyArray.length > 1, skip the iteration 
+    if(polyArray[i].coefficient === 0 && polyArray.length > 1) {
       //--counter;
-      continue;
+      //if(polyArray.length > 1) {
+        continue;
+      //}
     }
     // creates a monomial in the array
     monomial[i] = polyArray[i].coefficient + "x" + "^" + polyArray[i].power;

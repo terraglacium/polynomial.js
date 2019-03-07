@@ -49,15 +49,15 @@ function addition(polyArray, addedPoly) {
         }
       }
     }
-    console.log(polyArray);
+    //console.log(polyArray);
     //return polyArray;
   } else if (addedPoly.length === polyArray.length) {
     // for loop iterating through param array
     for(let i = 0; i < addedPoly.length; ++i) {
-      console.log(polyArray[i].power);
+      //console.log(polyArray[i].power);
         polyArray[i].coefficient += addedPoly[i].coefficient;
     }
-    console.log(polyArray);
+    //console.log(polyArray);
     //return polyArray;
   } else {
     //for loop iterating through added array
@@ -71,7 +71,7 @@ function addition(polyArray, addedPoly) {
         }
       }
     }
-    console.log(addedPoly);
+    //console.log(addedPoly);
     polyArray = addedPoly;
     //return addedPoly;
   }

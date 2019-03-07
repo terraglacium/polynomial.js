@@ -2,8 +2,9 @@
  * @file: main.js
  * @author: Andy Ren (a.k.a @terraglacium)
  * @license: apache 2.0
- * @version: 0.9.6
- * @comment: 1. divide is currently broken, 2. run using npm start
+ * @version: 0.9.8
+ * @comment: run using npm start!
+ * @bugs: 1. divide is broken, 2. poly clears previous inputs, 3. decimals round to 0
  */
 
 "use strict";
