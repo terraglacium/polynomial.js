@@ -38,7 +38,8 @@ let polyArray = [];
 
 //input here -->
 
-console.log("Welcome to polynomial.js!");
+console.log("Welcome to polycalc.js!");
+console.log("Version: 0.9.8");
 console.log("Please first input a polynomial using 'poly'.");
 console.log("Polynomial Format: 'ax^n+...+C'.");
 console.log("If you need help, input 'help ~'");
