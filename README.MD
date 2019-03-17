@@ -1,4 +1,4 @@
-## polynomial.node.js
+## polynomial.math
 
 A polynomial solver written in JavaScript, using node.js framework. npm packages used: readline-sync
 
