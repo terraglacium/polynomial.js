@@ -1,5 +1,5 @@
 {
-  "name": "polynomial.js",
+  "name": "polycalc.js",
   "version": "0.9.8",
   "description": "polynomial calculator script/algorithm",
   "main": "main.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terraglacium/polynomial.js.git"
+    "url": "git+https://github.com/terraglacium/polycalc.js.git"
   },
   "author": "Andy Ren",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/terraglacium/polynomial.js/issues"
+    "url": "https://github.com/terraglacium/polycalc.js/issues"
   },
-  "homepage": "https://github.com/terraglacium/polynomial.js#readme",
+  "homepage": "https://github.com/terraglacium/polycalc.js#readme",
   "devDependencies": {
     "eslint": "^5.14.1"
   },
