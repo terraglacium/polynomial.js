@@ -10,6 +10,7 @@ const polyEmptyCheck = require("./polyEmptyCheck.js");
  * Set coefficient of array = orig coeff * array power
  * Set array power - 1
  * Pop last element as it becomes extra 0th degree
+ * Check if constant being differentiated, add 0 term if so
  * Return polyArray
 */
 
@@ -23,6 +24,10 @@ function derivative(polyArray) {
   }
   //pop last element since it is now an extra 0th degree term (?)
   polyArray.pop();
+
+  if(polyArray.length < 1) { 
+    polyArray.unshift({coefficient: 0, power: 0});
+  }
   return polyArray;
 }
 

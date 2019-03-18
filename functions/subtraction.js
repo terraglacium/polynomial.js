@@ -4,7 +4,7 @@ const arrayGenerator = require("./arrayGenerator.js");
 const insertMissing = require("./insertMissing.js");
 const removeZeroes = require("./removeZeroes.js");
 const polyEmptyCheck = require("./polyEmptyCheck.js");
-const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
+const regex = /[+-]?\d*x\^\d+|[+-]?\d*x|[+-\s]?\d+/g;
 
 /*
  * Subtraction function:
@@ -19,15 +19,6 @@ const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 */
 
 function subtraction(polyArray, subtractedPoly){
-  //let userInput = prompt("Input a function to be added", "1x^1+1");
-  /*let userInput = "1";
-  let userInput1 = "-4x^3+6x^2+2x^1+3x^7+8x^8-888";
-  let userInput2 = "1x^2+1";
-  let subtractedPoly = [];
-  subtractedPoly = arrayGenerator(userInput.match(regex));
-  subtractedPoly = insertMissing(subtractedPoly);
-  */
-
   if(polyEmptyCheck(polyArray)) return;
   
   if(subtractedPoly.length < polyArray.length) {

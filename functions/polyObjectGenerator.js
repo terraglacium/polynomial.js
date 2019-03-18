@@ -1,12 +1,16 @@
 const arrayGenerator = require("./arrayGenerator.js");
 const insertMissing = require("./insertMissing.js");
 
-const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
+const regex = /[+-]?\d*x\^\d+|[+-]?\d*x|[+-\s]?\d+/g;
 
 /*
  * Polynomial Object Generator function:
  * @param = string
  * Takes in a string, and calls arrayGenerator and insertMissing
+ * try catch method -> try to build a polyArray using ^ methods
+ * catch takes in any error where: 
+ * 1 => .match yields an empty array error
+ * 2 => invalid characters creates a null array (invalid characters)
  * arrayGenerator creates an array of objects with polynomial properties
  * insertMissing adds missing terms that are zeroes
  * Returns polyArray

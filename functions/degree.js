@@ -2,11 +2,6 @@
 
 const polyEmptyCheck = require("./polyEmptyCheck.js");
 
-// using "export" for browser
-// cors req using ^
-// browserify for node?
-/*export*/
-
 /*
  * Degree function:
  * @param: polyArray

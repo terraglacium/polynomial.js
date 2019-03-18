@@ -2,6 +2,7 @@
 
 const polyEmptyCheck = require("./polyEmptyCheck.js");
 const stringGenerator = require("./stringGenerator.js");
+
 /*
  * printOut function:
  * @param = polyArray
@@ -14,6 +15,8 @@ function printOut(polyArray) {
 
     let string = stringGenerator(polyArray);
     console.log(string);
+    
+    //return string; 
 }
 
 module.exports = printOut;

@@ -2,7 +2,7 @@
  * @file: main.js
  * @author: Andy Ren (a.k.a @terraglacium)
  * @license: apache 2.0
- * @version: 0.9.8
+ * @version: 0.9.9
  * @comment: run using npm start!
  * @bugs: 1. divide is broken, 2. poly clears previous inputs, 3. decimals round to 0
  */
@@ -27,7 +27,8 @@ const integral = require("./functions/integral.js");
 const help = require("./functions/help.js");
 const polyEmptyCheck = require("./functions/polyEmptyCheck.js");
 
-const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
+const regex = /[+-]?\d*x\^\d+|[+-]?\d*x|[+-\s]?\d+/g;
+//const oldRegex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
 
 //let userInput = "";
 let polyArray = [];
@@ -39,7 +40,7 @@ let polyArray = [];
 //input here -->
 
 console.log("Welcome to polycalc.js!");
-console.log("Version: 0.9.8");
+console.log("Version: 0.9.9");
 console.log("Please first input a polynomial using 'poly'.");
 console.log("Polynomial Format: 'ax^n+...+C'.");
 console.log("If you need help, input 'help ~'");
@@ -67,9 +68,11 @@ readlineSync.promptCLLoop({
       console.log("Usage: addition [second polynomial] \n");
       polyEmptyCheck(polyArray);
       return;
+    } else if (polyEmptyCheck(polyArray)) {let test = "erf(x) = 1/sqrt(π)*(∫e^-t^2 dt)"} 
+    else {
+      polyArray = addition(polyArray, secondPoly);
+      printOut(polyArray);
     }
-    polyArray = addition(polyArray, secondPoly);
-    printOut(polyArray);
   },
   subtraction: function(secondPolyString) {
     let secondPoly = polyObjectGenerator(secondPolyString);
@@ -77,9 +80,11 @@ readlineSync.promptCLLoop({
       console.log("Usage: subtraction [second polynomial] \n");
       polyEmptyCheck(polyArray);
       return;
+    } else if (polyEmptyCheck(polyArray)) {let test = "z = a + bj"} 
+    else {
+      polyArray = subtraction(polyArray, secondPoly);
+      printOut(polyArray);
     }
-    polyArray = subtraction(polyArray, secondPoly);
-    printOut(polyArray);
   },
   multiply: function(secondPolyString) {
     let secondPoly = polyObjectGenerator(secondPolyString);
@@ -87,9 +92,11 @@ readlineSync.promptCLLoop({
       console.log("Usage: multiply [second polynomial] \n");
       polyEmptyCheck(polyArray);
       return;
+    } else if (polyEmptyCheck(polyArray)) {let test = "e = π"} 
+    else {
+      polyArray = multiply(polyArray, secondPoly);
+      printOut(polyArray);
     }
-    polyArray = multiply(polyArray, secondPoly);
-    printOut(polyArray);
   },
   divide: function() {
     console.log("WIP currently.");

@@ -4,7 +4,7 @@ const arrayGenerator = require("./arrayGenerator.js");
 const insertMissing = require("./insertMissing.js");
 const removeZeroes = require("./removeZeroes.js");
 const polyEmptyCheck = require("./polyEmptyCheck.js");
-const regex = /[+-]?\d+x\^\d+|[+-\s]?\d+/g;
+const regex = /[+-]?\d*x\^\d+|[+-]?\d*x|[+-\s]?\d+/g;
 
 /*
  * Addition function:

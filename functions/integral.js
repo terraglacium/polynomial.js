@@ -11,7 +11,6 @@ const polyEmptyCheck = require("./polyEmptyCheck.js");
  * Set coefficient of term = orig coeff * (1/(array power+1))
  * Set term power = ++power
  * Return polyArray
- * @bug: breaks after taking derivative of a constant or power: 0
 */
 
 function integral(polyArray) {
