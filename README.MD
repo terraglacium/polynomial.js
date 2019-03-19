@@ -12,4 +12,4 @@ A polynomial solver written in JavaScript, using node.js framework. npm packages
 - Dynamic help command 
 
 ## How to use: 
-Download the repo, extract to appropriate folder; Install nodejs; run `npm install` in the root folder, and npm start to start the program
+Download the repo, extract to appropriate folder; Install nodejs; run `npm install` in the root folder, and `npm start` to start the program
