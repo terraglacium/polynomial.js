@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "browserify": "^16.2.3",
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.10"
   }
 }
